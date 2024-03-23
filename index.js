@@ -7,7 +7,6 @@ const fileRouter = require('./routes/file.routes');
 mongoose.Promise = global.Promise;
 const app = express();
 const PORT = process.env.PORT || config.get('serverPort');
-const mongoDB = "mongodb://localhost:27017";
 const corsMiddleware = require('./middleware/cors.middleware')
 const filePathMiddleware = require('./middleware/filepath.middleware')
 const path = require('path')
@@ -22,10 +21,10 @@ app.use("/api/files", fileRouter)
 
 const start = async () => {
     try {
-        await mongoose.connect(mongoDB), {
+        await mongoose.connect(config.get("dbUrl"), {
             useNewUrlParser:true,
             useUnifiedTopology:true
-        }
+        })
         console.log('Connection has started...');
 
 
