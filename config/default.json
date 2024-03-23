@@ -3,5 +3,5 @@
   "secretKey": "mern-secret-key",
   "filePath" : "E:\\IT\\MERN3\\server\\files",
   "staticPath" : "E:\\IT\\MERN3\\server\\static",
-  "dbUrl" : "mongodb+srv://ivanphilippov1991:<password>@cloud.gwkzoi9.mongodb.net/?retryWrites=true&w=majority&appName=cloud"
+  "dbUrl" : "mongodb+srv://ivanphilippov1991:aXEKei4UaXZrcgeG@cloud.gwkzoi9.mongodb.net/?retryWrites=true&w=majority&appName=cloud"
 }
