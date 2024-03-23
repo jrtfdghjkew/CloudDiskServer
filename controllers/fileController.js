@@ -3,7 +3,7 @@ const User = require('../models/User')
 const File = require('../models/File')
 const fs = require('fs')
 const config = require('config')
-const { v4: uuidV4 } = require('uuid');
+const { uuid } = require('uuidv4');
 
 class FileController {
 
@@ -150,7 +150,7 @@ class FileController {
         try {
             const file = req.files.file
             const user = await User.findById(req.user.id)
-            const avatarName = uuidV4() + ".jpg"
+            const avatarName = uuid() + ".jpg"
             file.mv(config.get('staticPath') + "\\" + avatarName)
             user.avatar = avatarName
             await user.save()
